@@ -1,0 +1,9 @@
+*~
+*_keeper.cpp
+*_impl.cpp
+*_types.hpp
+*_client.hpp
+*_server.hpp
+build
+.waf-*
+.lock-wafbuild
