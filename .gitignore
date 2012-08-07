@@ -7,3 +7,5 @@
 build
 .waf-*
 .lock-wafbuild
+.omakedb*
+*.omc

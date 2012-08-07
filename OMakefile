@@ -1,0 +1,17 @@
+NAME=deep
+
+JENERATE = $(NAME)_keeper.cpp $(NAME)_impl.cpp
+MPIDL = $(NAME)_client.hpp $(NAME)_server.hpp $(NAME)_types.hpp
+.DEFAULT:$(MPIDL) $(JENERATE)
+
+JENERATOR = jenerator
+MPIDL_CPP = mpidl cpp -o . -p -n jubatus
+
+%_keeper.cpp %_impl.cpp: %.idl
+	$(JENERATOR) $<
+%_client.hpp %_server.hpp %_types.hpp: %.idl
+	$(MPIDL_CPP) $<
+
+.PHONY: clean
+clean:
+	rm -rf $(MPIDL) $(JENERATE)
