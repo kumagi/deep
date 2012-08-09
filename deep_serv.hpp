@@ -1,3 +1,4 @@
+/* -*- Mode: C; tab-width: 2; c-basic-offset: 2; indent-tabs-mode: nil; compile-command: "./waf" -*- */
 #ifndef DEEP_SERV_HPP_
 #define DEEP_SERV_HPP_
 
@@ -17,8 +18,9 @@ public:
   deep_serv(const server_argv& a);
   virtual ~deep_serv();
 
-  int query(const std::string&);
-  
+  std::vector<int> query(const std::string&);
+	//int query(const std::string&);
+
   void after_load();
 private:
   size_t ema_short_length_;
