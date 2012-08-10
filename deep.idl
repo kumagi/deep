@@ -1,6 +1,6 @@
 service deep{
-  #@random #@analysis #@pass
-  int query(0:string name, 1:string query)
+  #@broadcast #@analysis #@concat
+  list<int> query(0:string name, 1:string query)
 
   #@broadcast #@update #@all_and
   bool save(0:string name, 1: string id)

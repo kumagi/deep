@@ -18,8 +18,8 @@ public:
   deep_serv(const server_argv& a);
   virtual ~deep_serv();
 
-  //std::vector<int> query(const std::string&);
-	int query(const std::string&);
+  std::vector<int> query(const std::string&);
+	//int query(const std::string&);
 
   void after_load();
 private:
