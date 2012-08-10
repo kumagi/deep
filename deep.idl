@@ -1,12 +1,15 @@
 service deep{
-  #@broadcast #@analysis #@pass
-  list<int> query(0:string name, 1:string query)
+  #@random #@analysis #@pass
+  int query(0:string name, 1:string query)
 
   #@broadcast #@update #@all_and
   bool save(0:string name, 1: string id)
 
   #@broadcast #@update #@all_and
   bool load(0:string name, 1:string id)
+
+  #@random #@analysis #@pass
+  map<string,string> get_loads(0:string name)
 
   #@broadcast #@update #@merge
   map<string,map<string, string> > get_status(0: string name)
